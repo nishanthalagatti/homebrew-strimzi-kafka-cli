@@ -3,9 +3,9 @@ class StrimziKafkaCli < Formula
 
   desc "Command Line Interface for Strimzi Kafka Operator"
   homepage "https://github.com/systemcraftsman/strimzi-kafka-cli"
-  url "file:///dev/null"
-  license "Apache-2.0"
   version "0.1.0a58"
+  url "https://files.pythonhosted.org/packages/source/s/strimzi-kafka-cli/strimzi-kafka-cli-"+version+".tar.gz"
+  license "Apache-2.0"
 
   depends_on ["python@3.9", "python@3.8", "python@3.7", "python@3.6"]
 
