@@ -7,7 +7,7 @@ class StrimziKafkaCli < Formula
   url "https://files.pythonhosted.org/packages/source/s/strimzi-kafka-cli/strimzi-kafka-cli-"+version+".tar.gz"
   license "Apache-2.0"
 
-  depends_on ["python@3.9", "python@3.8", "python@3.7", "python@3.6"]
+  depends_on ["python@3.10", "python@3.9", "python@3.8", "python@3.7", "python@3.6"]
 
   def install
     venv = virtualenv_create(libexec, python="python3")
