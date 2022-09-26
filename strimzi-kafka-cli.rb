@@ -3,7 +3,7 @@ class StrimziKafkaCli < Formula
 
   desc "Command Line Interface for Strimzi Kafka Operator"
   homepage "https://github.com/systemcraftsman/strimzi-kafka-cli"
-  version "0.1.0a61"
+  version "0.1.0a64"
   url "https://files.pythonhosted.org/packages/source/s/strimzi-kafka-cli/strimzi-kafka-cli-"+version+".tar.gz"
   license "Apache-2.0"
 
