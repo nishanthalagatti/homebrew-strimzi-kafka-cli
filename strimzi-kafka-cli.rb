@@ -10,15 +10,15 @@ class StrimziKafkaCli < Formula
   depends_on ["python@3.11", "python@3.10", "python@3.9", "python@3.8"]
 
   def install
-    venv = virtualenv_create(libexec, python="python3")
+    venv = virtualenv_create(libexec, python="python3.11")
 
     @venv_root = venv.instance_variable_get(:@venv_root)
     @formula = venv.instance_variable_get(:@formula)
 
     bin_before = Dir[@venv_root/"bin/*"].to_set
 
-    # system @venv_root/"bin/pip", "install", "strimzi-kafka-cli==" + version
-    venv.pip_install("strimzi-kafka-cli==" + version)
+    system @venv_root/"bin/pip", "install", "strimzi-kafka-cli==" + version
+    #venv.pip_install("strimzi-kafka-cli==" + version)
 
     bin_after = Dir[@venv_root/"bin/*"].to_set
     bin_to_link = (bin_after - bin_before).to_a
