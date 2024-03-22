@@ -10,7 +10,7 @@ class StrimziKafkaCli < Formula
   depends_on ["python@3.11", "python@3.10", "python@3.9", "python@3.8"]
 
   def install
-    venv = virtualenv_create(libexec, python="python3")
+    venv = virtualenv_create(libexec, python="python@3.11")
 
     @venv_root = venv.instance_variable_get(:@venv_root)
     @formula = venv.instance_variable_get(:@formula)
