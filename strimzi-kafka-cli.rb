@@ -18,7 +18,6 @@ class StrimziKafkaCli < Formula
     bin_before = Dir[@venv_root/"bin/*"].to_set
 
     system @venv_root/"bin/pip", "install", "strimzi-kafka-cli==" + version
-    #venv.pip_install("strimzi-kafka-cli==" + version)
 
     bin_after = Dir[@venv_root/"bin/*"].to_set
     bin_to_link = (bin_after - bin_before).to_a
